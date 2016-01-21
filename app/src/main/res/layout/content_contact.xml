@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.br.apaq.activities.ContactActivity"
+    tools:showIn="@layout/activity_contact"
+    android:background="@color/colorWhite">
+
+    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text" />
+    -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativePhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cellphoneOne"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/contact" />
+
+            <TextView
+                android:id="@+id/numberContactOne"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="+55 088 99998877"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeCellphone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/cellphoneTwo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mobile" />
+
+            <TextView
+                android:id="@+id/numberContactTwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="+55 088 99998877"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/cellphoneThree"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/mail" />
+
+            <TextView
+                android:id="@+id/numberContactThree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="apaq@email.com"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/cellphoneFour"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/map" />
+
+            <TextView
+                android:id="@+id/numberContactFour"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mapa e Rota"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/apaq" />
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

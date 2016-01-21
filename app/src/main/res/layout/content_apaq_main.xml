@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.br.apaq.ApaqMainActivity"
+    tools:showIn="@layout/activity_apaq_main">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dogcat" />
+
+    <ImageButton
+        android:id="@+id/imgbEnterprise"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:background="@drawable/medical" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imgbEnterprise"
+        android:layout_alignRight="@+id/imgbEnterprise"
+        android:layout_below="@+id/imgbEnterprise"
+        android:text="@string/enterprise"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@+id/imgbEnterprise"
+        android:layout_alignStart="@+id/imgbEnterprise"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/imgbServices"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/nurse" />
+
+    <ImageButton
+        android:id="@+id/imgbContact"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/contact"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/apaq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/services"
+        android:gravity="center"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/imgbServices"
+        android:layout_alignStart="@+id/imgbServices"
+        android:layout_alignRight="@+id/imgbServices"
+        android:layout_alignEnd="@+id/imgbServices" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/contact"
+        android:gravity="center"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignRight="@+id/imgbContact"
+        android:layout_alignEnd="@+id/imgbContact"
+        android:layout_alignLeft="@+id/imgbContact"
+        android:layout_alignStart="@+id/imgbContact" />
+</RelativeLayout>
