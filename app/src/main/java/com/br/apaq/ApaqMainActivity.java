@@ -1,9 +1,13 @@
 package com.br.apaq;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,14 +15,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 import com.br.apaq.activities.ContactActivity;
 import com.br.apaq.activities.EnterpriseActivity;
 import com.br.apaq.activities.ServicesActivity;
 
-public class ApaqMainActivity extends AppCompatActivity implements OnClickListener{
+public class ApaqMainActivity extends AppCompatActivity implements OnClickListener {
 
     ImageButton enterprise, contact, services;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,15 +36,28 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
+                String url = "tel:04188996400688";
+                Intent itCellPhone = new Intent(Intent.ACTION_CALL, Uri.parse(url));
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                startActivity(itCellPhone);
             }
         });
 
 
-        enterprise = (ImageButton)findViewById(R.id.imgbEnterprise);
-        services = (ImageButton)findViewById(R.id.imgbServices);
-        contact = (ImageButton)findViewById(R.id.imgbContact);
+        enterprise = (ImageButton) findViewById(R.id.imgbEnterprise);
+        services = (ImageButton) findViewById(R.id.imgbServices);
+        contact = (ImageButton) findViewById(R.id.imgbContact);
 
         enterprise.setOnClickListener(this);
         services.setOnClickListener(this);
@@ -49,15 +68,16 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
     @Override
     public void onClick(View v) {
         try {
-            switch (v.getId()){
+            switch (v.getId()) {
                 case R.id.imgbEnterprise:
                     Intent itEnterprise = new Intent(getApplicationContext(), EnterpriseActivity.class);
                     startActivity(itEnterprise);
                     break;
 
                 case R.id.imgbServices:
-                    Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
-                    startActivity(itServices);
+                    Toast.makeText(getApplicationContext(), "Serviços em desenvolvimento!", Toast.LENGTH_SHORT).show();
+                    //Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
+                    //startActivity(itServices);
                     break;
 
                 case R.id.imgbContact:
@@ -66,10 +86,8 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
                     break;
                 default:
             }
-        }catch (Exception e){
-
+        } catch (Exception e) {
         }
-
     }
 
     @Override
@@ -88,9 +106,10 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent itDev = new Intent(getApplicationContext(), DevelopersActivity.class);
+            startActivity(itDev);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 

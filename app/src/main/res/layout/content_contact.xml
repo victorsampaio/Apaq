@@ -9,7 +9,6 @@
     tools:context="com.br.apaq.activities.ContactActivity"
     tools:showIn="@layout/activity_contact"
     android:background="@color/colorWhite">
-
     <!--
         <TextView
             android:layout_width="wrap_content"
@@ -18,118 +17,253 @@
             android:text="@string/large_text" />
     -->
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/relativePhone"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/cellphoneOne"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/contact" />
-
-            <TextView
-                android:id="@+id/numberContactOne"
+            <RelativeLayout
+                android:id="@+id/relativeCall"
+                android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="+55 088 99998877"
-                android:textSize="28sp" />
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
 
-        </RelativeLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:foregroundGravity="center"
+                    android:background="@drawable/contactprincipal"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactOne" />
 
-        <RelativeLayout
-            android:id="@+id/relativeCellphone"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/phone_two"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:id="@+id/descContactOne"
+                    android:layout_toRightOf="@+id/contactOne"
+                    android:layout_toEndOf="@+id/contactOne"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactOne"
+                    android:layout_alignBottom="@+id/contactOne" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeCell"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/mob"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactTwo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/phone_three"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:id="@+id/descContactTwo"
+                    android:layout_toRightOf="@+id/contactTwo"
+                    android:layout_toEndOf="@+id/contactTwo"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactTwo"
+                    android:layout_alignBottom="@+id/contactTwo" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeEmail"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:foregroundGravity="center"
+                    android:background="@drawable/email"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactThree" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/email"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorRed"
+                    android:id="@+id/descContactThree"
+                    android:layout_toRightOf="@+id/contactThree"
+                    android:layout_toEndOf="@+id/contactThree"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactThree"
+                    android:layout_alignBottom="@+id/contactThree" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRoute"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:foregroundGravity="center"
+                    android:background="@drawable/route"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactFour" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/maps_route"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorRoute"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:id="@+id/descContactFour"
+                    android:layout_toRightOf="@+id/contactFour"
+                    android:layout_toEndOf="@+id/contactFour"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactFour"
+                    android:layout_alignBottom="@+id/contactFour" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeFacebook"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:foregroundGravity="center"
+                    android:background="@drawable/faceb"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactFive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/facebook"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:textColor="@color/colorFacebook"
+                    android:textStyle="bold"
+                    android:id="@+id/descContactFive"
+                    android:layout_toRightOf="@+id/contactFive"
+                    android:layout_toEndOf="@+id/contactFive"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactFive"
+                    android:layout_alignBottom="@+id/contactFive" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeInstagram"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/colorGrey">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/insta"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/contactSix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/instagram"
+                    android:textColor="@color/colorInstagram"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:id="@+id/descContactSix"
+                    android:layout_toRightOf="@+id/contactSix"
+                    android:layout_toEndOf="@+id/contactSix"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_alignTop="@+id/contactSix"
+                    android:layout_alignBottom="@+id/contactSix" />
+
+            </RelativeLayout>
 
             <ImageView
-                android:id="@+id/cellphoneTwo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/mobile" />
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/numberContactTwo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="+55 088 99998877"
-                android:textSize="28sp" />
 
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeEmail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp">
-
-            <ImageView
-                android:id="@+id/cellphoneThree"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/mail" />
-
-            <TextView
-                android:id="@+id/numberContactThree"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="apaq@email.com"
-                android:textSize="28sp" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeMap"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp">
-
-            <ImageView
-                android:id="@+id/cellphoneFour"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/map" />
-
-            <TextView
-                android:id="@+id/numberContactFour"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="Mapa e Rota"
-                android:textSize="28sp" />
-
-        </RelativeLayout>
-
-        <ImageView
-            android:layout_marginTop="15dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/apaq" />
-    </LinearLayout>
-
+    </ScrollView>
 
 </android.support.v4.widget.NestedScrollView>

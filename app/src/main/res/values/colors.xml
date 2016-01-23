@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#87d37c</color>
+    <color name="colorPrimaryDark">#2ecc71</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#BDBDBD</color>
+    <color name="colorFacebook">#3b5998</color>
+    <color name="colorInstagram">#9b6954</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorRoute">#009688</color>
+
+
 </resources>
