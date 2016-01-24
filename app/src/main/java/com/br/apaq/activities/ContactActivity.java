@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.br.apaq.R;
+import com.br.apaq.maps.MapsActivity;
 
 public class ContactActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,7 +82,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                     break;
                 case R.id.relativeRoute:
                     Toast.makeText(getApplicationContext(),"Mapas e Rotas em desenvolvimento!",Toast.LENGTH_SHORT).show();
-                   // route();
+                    route();
                     break;
                 case R.id.relativeFacebook:
                     goFacebook();
