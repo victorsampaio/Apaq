@@ -81,7 +81,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("APAQ")
                 .snippet("R. Francisco Seg. Costa, nº 362, Quixadá-CE")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.mmap)));
-
-
     }
 }
