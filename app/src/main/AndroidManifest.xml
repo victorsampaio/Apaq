@@ -32,7 +32,7 @@
         <activity
             android:name=".ApaqMainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.ServicesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -77,7 +77,7 @@
 
         <activity
             android:name=".maps.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +24,7 @@ import com.br.apaq.activities.ServicesActivity;
 
 public class ApaqMainActivity extends AppCompatActivity implements OnClickListener {
 
+    private static final String Tag_Error ="Error -  Main: ";
     ImageButton enterprise, contact, services;
 
     @Override
@@ -87,6 +89,8 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
                 default:
             }
         } catch (Exception e) {
+            Log.e(Tag_Error, "-->> Error: " + e);
+            Toast.makeText(getApplicationContext(), "Error: ", Toast.LENGTH_SHORT).show();
         }
     }
 

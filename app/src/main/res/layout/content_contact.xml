@@ -22,7 +22,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -58,19 +58,19 @@
                     android:id="@+id/descContactOne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactOne"
+                    android:layout_alignTop="@+id/contactOne"
                     android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/contactOne"
+                    android:layout_toRightOf="@+id/contactOne"
                     android:foregroundGravity="center"
                     android:gravity="center"
                     android:text="@string/phone_two"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorAccent"
                     android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:layout_toRightOf="@+id/contactOne"
-                    android:layout_toEndOf="@+id/contactOne"
-                    android:layout_alignTop="@+id/contactOne"
-                    android:layout_alignBottom="@+id/contactOne" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -107,6 +107,8 @@
                     android:id="@+id/descContactTwo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactTwo"
+                    android:layout_alignTop="@+id/contactTwo"
                     android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
                     android:layout_toEndOf="@+id/contactTwo"
@@ -116,9 +118,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorBlack"
                     android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:layout_alignTop="@+id/contactTwo"
-                    android:layout_alignBottom="@+id/contactTwo" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -156,18 +156,18 @@
                     android:id="@+id/descContactThree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactThree"
+                    android:layout_alignTop="@+id/contactThree"
                     android:layout_marginLeft="9dp"
                     android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/contactThree"
+                    android:layout_toRightOf="@+id/contactThree"
                     android:gravity="center"
                     android:text="@string/email"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorRed"
                     android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:layout_alignTop="@+id/contactThree"
-                    android:layout_toRightOf="@+id/contactThree"
-                    android:layout_toEndOf="@+id/contactThree"
-                    android:layout_alignBottom="@+id/contactThree" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -181,13 +181,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_above="@+id/descContactFour"
                     android:layout_alignLeft="@+id/descContactFour"
+                    android:layout_alignParentTop="true"
                     android:layout_alignStart="@+id/descContactFour"
                     android:foregroundGravity="center"
-                    android:text="@string/text_address"
                     android:gravity="center"
-                    android:layout_alignParentTop="true"
-                    android:layout_above="@+id/descContactFour" />
+                    android:text="@string/text_address" />
 
                 <ImageView
                     android:id="@+id/contactFour"
@@ -205,6 +205,7 @@
                     android:id="@+id/descContactFour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/contactFour"
                     android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
                     android:layout_toEndOf="@+id/contactFour"
@@ -214,20 +215,19 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorRoute"
                     android:textSize="15dp"
-                    android:textStyle="bold"
-                    android:layout_alignTop="@+id/contactFour" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactFour"
                     android:layout_alignLeft="@+id/descContactFour"
                     android:layout_alignStart="@+id/descContactFour"
                     android:layout_below="@+id/descContactFour"
                     android:gravity="center"
                     android:text="@string/address_two"
                     android:textColor="@color/colorRoute"
-                    android:textStyle="bold"
-                    android:layout_alignBottom="@+id/contactFour" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -254,6 +254,8 @@
                     android:id="@+id/descContactFive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactFive"
+                    android:layout_alignTop="@+id/contactFive"
                     android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
                     android:layout_toEndOf="@+id/contactFive"
@@ -263,9 +265,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorFacebook"
                     android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:layout_alignTop="@+id/contactFive"
-                    android:layout_alignBottom="@+id/contactFive" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -292,6 +292,7 @@
                     android:id="@+id/descContactSix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/contactSix"
                     android:layout_alignTop="@+id/contactSix"
                     android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp"
@@ -302,8 +303,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/colorInstagram"
                     android:textSize="22dp"
-                    android:textStyle="bold"
-                    android:layout_alignBottom="@+id/contactSix" />
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
