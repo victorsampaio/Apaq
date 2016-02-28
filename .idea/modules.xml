@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Apaq.iml" filepath="$PROJECT_DIR$/Apaq.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unity-ads-1.5.6/unity-ads-1.5.6.iml" filepath="$PROJECT_DIR$/unity-ads-1.5.6/unity-ads-1.5.6.iml" />
     </modules>
   </component>
 </project>

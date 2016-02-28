@@ -18,6 +18,8 @@ import android.widget.ImageButton;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import com.appodeal.ads.Appodeal;
+import com.appodeal.ads.InterstitialCallbacks;
 import com.br.apaq.activities.ContactActivity;
 import com.br.apaq.activities.EnterpriseActivity;
 import com.br.apaq.activities.ServicesActivity;
@@ -33,6 +35,14 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
         setContentView(R.layout.activity_apaq_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+    /*
+        String appKey = "bf1a2363c83fe020437a653ae996e9d5838ad2ee5729612d";
+        Appodeal.initialize(this, appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER | Appodeal.REWARDED_VIDEO);
+       Appodeal.setTesting(true);
+       // Appodeal.show(this, Appodeal.INTERSTITIAL);
+        Appodeal.show(this,Appodeal.BANNER_BOTTOM);
+*/
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -117,5 +127,50 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Appodeal.onResume(this, Appodeal.BANNER);
+    }
 
+
+    private boolean gettingOut = false;
+    @Override
+    public void onBackPressed() {
+
+        if (gettingOut){
+            super.onBackPressed();
+            finish();
+        } else {
+            gettingOut = true;
+            Appodeal.show(this, Appodeal.INTERSTITIAL);
+
+            Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
+                @Override
+                public void onInterstitialLoaded(boolean b) {
+
+                }
+
+                @Override
+                public void onInterstitialFailedToLoad() {
+
+                }
+
+                @Override
+                public void onInterstitialShown() {
+
+                }
+
+                @Override
+                public void onInterstitialClicked() {
+
+                }
+
+                @Override
+                public void onInterstitialClosed() {
+                    onBackPressed();
+                }
+            });
+        }
+    }
 }
