@@ -14,6 +14,12 @@
     <string name="phone_three">(88) 99633-2351</string>
     <string name="email">apaqce@gmail.com</string>
     <string name="developers">Desenvolvedores</string>
+    <string name="text_contactOne">Contato I</string>
+    <string name="text_contactTwo"> Contato II</string>
+    <string name="text_email">E-mail</string>
+    <string name="text_address">Endereço, Mapas e Rota</string>
+    <string name="address">Rua Francisco Segundo Costa, nº 362</string>
+    <string name="address_two">Bairro: Combate, CEP: 63903-438, Quixadá-CE</string>
 
     <string name="large_text">
         "Associação dos Protetores de Animais de Quixadá \n\n"

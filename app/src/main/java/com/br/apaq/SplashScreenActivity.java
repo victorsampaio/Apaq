@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class SplashScreenActivity extends AppCompatActivity implements Runnable {
 
-    private static final int DELAY = 3000;
+    private static final int DELAY = 2550;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

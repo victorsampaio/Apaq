@@ -81,7 +81,6 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                     sendEmail();
                     break;
                 case R.id.relativeRoute:
-                    Toast.makeText(getApplicationContext(),"Mapas e Rotas em desenvolvimento!",Toast.LENGTH_SHORT).show();
                     route();
                     break;
                 case R.id.relativeFacebook:
@@ -149,7 +148,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    private void route(){
+    private void route() {
         Intent itRoute = new Intent(getApplicationContext(), MapsActivity.class);
         startActivity(itRoute);
     }

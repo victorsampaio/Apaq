@@ -52,11 +52,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        //LatLng sydney = new LatLng(-34, 151);
-        LatLng sydney = new LatLng(-4.9708482, -39.0215134);
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("APAQ"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //LatLng apaq = new LatLng(-34, 151);
+        LatLng apaq = new LatLng(-4.9708482, -39.0215134);
+        //mMap.addMarker(new MarkerOptions().position(apaq).title("Marker in Sydney"));
+        //mMap.addMarker(new MarkerOptions().position(apaq).title("APAQ"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(apaq));
         mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED
@@ -72,12 +72,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         mMap.setMyLocationEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 10));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(apaq, 14));
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        mMap.addMarker(new MarkerOptions().position(sydney)
+        mMap.addMarker(new MarkerOptions().position(apaq)
                 .title("APAQ")
                 .snippet("R. Francisco Seg. Costa, nº 362, Quixadá-CE")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.mmap)));
