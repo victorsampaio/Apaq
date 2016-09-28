@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.br.apaq"
-        minSdkVersion 16
+        minSdkVersion 10
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -27,11 +27,16 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.google.android.gms:play-services:8.4.0'
 
+    compile('com.mikepenz:materialdrawer:5.1.5@aar') {
+        transitive = true
+    }
+
     compile project(':unity-ads-1.5.6')
 
     compile 'com.google.android.gms:play-services-location:8.4.0'
     compile 'com.google.android.gms:play-services-maps:8.4.0'
     compile 'com.google.android.gms:play-services-ads:8.4.0'
-
+    compile project(':unity-ads-1.5.6')
     compile 'com.android.support:multidex:1.0.0'
+
 }
