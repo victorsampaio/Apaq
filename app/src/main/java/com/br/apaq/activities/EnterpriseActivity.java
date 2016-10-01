@@ -17,6 +17,9 @@ public class EnterpriseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enterprise);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -28,5 +31,14 @@ public class EnterpriseActivity extends AppCompatActivity {
             }
         });
         */
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.left_arrow));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 }

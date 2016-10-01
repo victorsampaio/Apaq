@@ -35,6 +35,7 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
         setContentView(R.layout.activity_apaq_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.mmap);
 
     /*
         String appKey = "bf1a2363c83fe020437a653ae996e9d5838ad2ee5729612d";
@@ -87,9 +88,9 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
                     break;
 
                 case R.id.imgbServices:
-                    Toast.makeText(getApplicationContext(), "Serviços em desenvolvimento!", Toast.LENGTH_SHORT).show();
-                    //Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
-                    //startActivity(itServices);
+                    //Toast.makeText(getApplicationContext(), "Serviços em desenvolvimento!", Toast.LENGTH_SHORT).show();
+                    Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
+                    startActivity(itServices);
                     break;
 
                 case R.id.imgbContact:

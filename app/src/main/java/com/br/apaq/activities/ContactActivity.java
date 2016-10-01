@@ -29,6 +29,10 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,14 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                     return;
                 }
                 startActivity(itCellPhone);
+            }
+        });
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.left_arrow));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
