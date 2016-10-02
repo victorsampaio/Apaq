@@ -18,14 +18,21 @@ import android.widget.Toast;
 import com.br.apaq.R;
 import com.br.apaq.maps.MapsActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ContactActivity extends AppCompatActivity implements View.OnClickListener {
 
-    RelativeLayout rCall, rCell, rEmail, rRoute, rFacebook, rInstagram;
+    @BindView(R.id.relativeCall)
+    RelativeLayout rCall;
+    
+    RelativeLayout rCell, rEmail, rRoute, rFacebook, rInstagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -63,7 +70,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-        rCall = (RelativeLayout) findViewById(R.id.relativeCall);
+        //rCall = (RelativeLayout) findViewById(R.id.relativeCall);
         rCell = (RelativeLayout) findViewById(R.id.relativeCell);
         rEmail = (RelativeLayout) findViewById(R.id.relativeEmail);
         rRoute = (RelativeLayout) findViewById(R.id.relativeRoute);
