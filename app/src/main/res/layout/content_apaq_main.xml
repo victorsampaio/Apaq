@@ -30,7 +30,8 @@
         android:layout_below="@+id/imageView"
         android:layout_marginLeft="19dp"
         android:layout_marginStart="19dp"
-        android:background="@drawable/medical" />
+        android:background="@drawable/medical"
+        android:onClick="onClick"/>
 
     <TextView
         android:id="@+id/textView"
@@ -64,7 +65,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
-        android:background="@drawable/phone" />
+        android:background="@drawable/phone"
+        android:onClick="onClick"/>
 
     <ImageView
         android:id="@+id/imageView2"

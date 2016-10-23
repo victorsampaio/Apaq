@@ -8,19 +8,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.br.apaq.SplashScreenActivity"
-    android:background="@color/colorWhite">
-
-    <ImageView
-        android:id="@+id/imgTop"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/dogcat"/>
+    android:background="@color/colorWhite"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/logoApaq"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/imgTop"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:foregroundGravity="center"
         android:src="@drawable/logo"/>
 
     <ProgressBar
@@ -28,6 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
         android:layout_below="@+id/logoApaq"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

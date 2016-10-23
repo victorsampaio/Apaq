@@ -24,15 +24,27 @@ import com.br.apaq.activities.ContactActivity;
 import com.br.apaq.activities.EnterpriseActivity;
 import com.br.apaq.activities.ServicesActivity;
 
-public class ApaqMainActivity extends AppCompatActivity implements OnClickListener {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private static final String Tag_Error ="Error -  Main: ";
-    ImageButton enterprise, contact, services;
+public class ApaqMainActivity extends AppCompatActivity {
+
+    private static final String Tag_Error = "Error -  Main: ";
+
+    @BindView(R.id.imgbEnterprise)
+    ImageButton enterprise;
+    @BindView(R.id.imgbContact)
+    ImageButton contact;
+    @BindView(R.id.imgbServices)
+    ImageButton services;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apaq_main);
+        ButterKnife.bind(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.drawable.mmap);
@@ -67,43 +79,27 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
             }
         });
 
-
-        enterprise = (ImageButton) findViewById(R.id.imgbEnterprise);
-        services = (ImageButton) findViewById(R.id.imgbServices);
-        contact = (ImageButton) findViewById(R.id.imgbContact);
-
-        enterprise.setOnClickListener(this);
-        services.setOnClickListener(this);
-        contact.setOnClickListener(this);
-
     }
 
-    @Override
-    public void onClick(View v) {
-        try {
-            switch (v.getId()) {
-                case R.id.imgbEnterprise:
-                    Intent itEnterprise = new Intent(getApplicationContext(), EnterpriseActivity.class);
-                    startActivity(itEnterprise);
-                    break;
 
-                case R.id.imgbServices:
-                    //Toast.makeText(getApplicationContext(), "Serviços em desenvolvimento!", Toast.LENGTH_SHORT).show();
-                    Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
-                    startActivity(itServices);
-                    break;
-
-                case R.id.imgbContact:
-                    Intent itContact = new Intent(getApplicationContext(), ContactActivity.class);
-                    startActivity(itContact);
-                    break;
-                default:
-            }
-        } catch (Exception e) {
-            Log.e(Tag_Error, "-->> Error: " + e);
-            Toast.makeText(getApplicationContext(), "Error: ", Toast.LENGTH_SHORT).show();
-        }
+    @OnClick(R.id.imgbEnterprise)
+    public void enterprise() {
+        Intent itEnterprise = new Intent(getApplicationContext(), EnterpriseActivity.class);
+        startActivity(itEnterprise);
     }
+
+    @OnClick(R.id.imgbServices)
+    public void services() {
+        Intent itServices = new Intent(getApplicationContext(), ServicesActivity.class);
+        startActivity(itServices);
+    }
+
+    @OnClick(R.id.imgbContact)
+    public void contact() {
+        Intent itContact = new Intent(getApplicationContext(), ContactActivity.class);
+        startActivity(itContact);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -136,10 +132,11 @@ public class ApaqMainActivity extends AppCompatActivity implements OnClickListen
 
 
     private boolean gettingOut = false;
+
     @Override
     public void onBackPressed() {
 
-        if (gettingOut){
+        if (gettingOut) {
             super.onBackPressed();
             finish();
         } else {

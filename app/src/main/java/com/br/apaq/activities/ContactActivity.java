@@ -20,25 +20,38 @@ import com.br.apaq.maps.MapsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class ContactActivity extends AppCompatActivity implements View.OnClickListener {
+public class ContactActivity extends AppCompatActivity  {
 
     @BindView(R.id.relativeCall)
     RelativeLayout rCall;
-    
-    RelativeLayout rCell, rEmail, rRoute, rFacebook, rInstagram;
+
+    @BindView(R.id.relativeCell)
+    RelativeLayout rCell;
+
+    @BindView(R.id.relativeEmail)
+    RelativeLayout email;
+
+    @BindView(R.id.relativeRoute)
+    RelativeLayout rRoute;
+
+    @BindView(R.id.relativeFacebook)
+    RelativeLayout rFacebook;
+
+    @BindView(R.id.relativeInstagram)
+    RelativeLayout rInstagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
         ButterKnife.bind(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +61,8 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                 //        .setAction("Action", null).show();
                 String url = "tel:04188996400688";
                 Intent itCellPhone = new Intent(Intent.ACTION_CALL, Uri.parse(url));
-                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -70,51 +84,36 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-        //rCall = (RelativeLayout) findViewById(R.id.relativeCall);
-        rCell = (RelativeLayout) findViewById(R.id.relativeCell);
-        rEmail = (RelativeLayout) findViewById(R.id.relativeEmail);
-        rRoute = (RelativeLayout) findViewById(R.id.relativeRoute);
-        rFacebook = (RelativeLayout) findViewById(R.id.relativeFacebook);
-        rInstagram = (RelativeLayout) findViewById(R.id.relativeInstagram);
-
-        rCall.setOnClickListener(this);
-        rCell.setOnClickListener(this);
-        rEmail.setOnClickListener(this);
-        rRoute.setOnClickListener(this);
-        rFacebook.setOnClickListener(this);
-        rInstagram.setOnClickListener(this);
-
     }
 
-    @Override
-    public void onClick(View v) {
-        try {
-            switch (v.getId()) {
-                case R.id.relativeCall:
-                    callphone();
-                    break;
-                case R.id.relativeCell:
-                    callCellPhone();
-                    break;
-                case R.id.relativeEmail:
-                    sendEmail();
-                    break;
-                case R.id.relativeRoute:
-                    route();
-                    break;
-                case R.id.relativeFacebook:
-                    goFacebook();
-                    break;
-                case R.id.relativeInstagram:
-                    goInstagram();
-                    break;
-                default:
-            }
+    @OnClick(R.id.relativeCall)
+    public void call() {
+        callphone();
+    }
 
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Ocorreu um erro. Entre em contato com os desenvolvedores!",
-                    Toast.LENGTH_SHORT).show();
-        }
+    @OnClick(R.id.relativeCell)
+    public void callCell() {
+        callCellPhone();
+    }
+
+    @OnClick(R.id.relativeEmail)
+    public void apaqEmail() {
+        sendEmail();
+    }
+
+    @OnClick(R.id.relativeRoute)
+    public void apaqRoute() {
+        route();
+    }
+
+    @OnClick(R.id.relativeFacebook)
+    public void apaqFacebook() {
+        goFacebook();
+    }
+
+    @OnClick(R.id.relativeInstagram)
+    public void apaqInstagram() {
+        goInstagram();
     }
 
     private void callphone() {
