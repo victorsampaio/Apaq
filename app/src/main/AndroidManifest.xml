@@ -258,6 +258,9 @@
             android:name=".activities.ServicesScrollingActivity"
             android:label="@string/title_activity_services_scrolling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a03b983885f89ffea3e245d568bcb34bb1d3c26c" />
     </application>
 
 </manifest>
