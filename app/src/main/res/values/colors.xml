@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
     <color name="colorPrimary">#87d37c</color>
     <color name="colorPrimaryDark">#2ecc71</color>
+
     <color name="colorAccent">#FF4081</color>
+    -->
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
     <color name="colorGrey">#BDBDBD</color>
-    <color name="colorFacebook">#3b5998</color>
-    <color name="colorInstagram">#9b6954</color>
+    <color name="colorFacebook">#3B5998</color>
+    <color name="colorInstagram">#7823BC</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorRoute">#009688</color>
+
+    <color name="colorApaqI">#FBDE9F</color>
+    <color name="colorApaqII">#321800</color>
+
+    <color name="colorPrimary">#FBDE9F</color>
+    <color name="colorPrimaryDark">#c6ae7b</color>
+    <color name="colorAccent">#4a2605</color>
+
+    <color name="colorContactI">#9b6954</color>
+    <color name="colorContactII">#bc866f</color>
+
+    <color name="transparentBlack">#8f2b2b2b</color>
+    <color name="transparentWhite">#96f1f1f1</color>
 
 
 </resources>

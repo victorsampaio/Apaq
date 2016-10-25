@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.br.apaq">
 
-    <!--App o Deal permissions -->
+    <!-- App o Deal permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--App o Deal permissions END -->
+    <!-- App o Deal permissions END -->
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -34,7 +34,6 @@
             android:name=".ApaqMainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.ServicesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -80,7 +79,7 @@
             android:name=".maps.MapsActivity"
             android:label="@string/title_activity_maps" />
 
-        <!--APPODEAL Conf-->
+        <!-- APPODEAL Conf -->
         <meta-data
             android:name="com.appodeal.framework"
             android:value="android" />
@@ -91,6 +90,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
@@ -103,7 +103,6 @@
             android:name="com.appodeal.ads.VideoActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <activity
             android:name="com.appodeal.ads.LoaderActivity"
             android:configChanges="orientation|screenSize"
@@ -117,18 +116,15 @@
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
-
         <activity
             android:name="com.chartboost.sdk.CBImpressionActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-
         <activity
             android:name="com.applovin.adview.AppLovinInterstitialActivity"
             android:theme="@android:style/Theme.Translucent" />
-
         <activity
             android:name="com.mopub.mobileads.MoPubActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -142,36 +138,29 @@
         <activity
             android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-
         <activity
             android:name="org.nexage.sourcekit.mraid.MRAIDBrowser"
             android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent" />
-
         <activity
             android:name="com.amazon.device.ads.AdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-
         <activity
             android:name="ru.mail.android.mytarget.ads.MyTargetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
         <activity
             android:name="org.nexage.sourcekit.vast.activity.VASTActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
         <activity
             android:name="org.nexage.sourcekit.vast.activity.VPAIDActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
         <activity
             android:name="com.appodeal.ads.networks.SpotXActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.facebook.ads.InterstitialActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-
         <activity
             android:name="com.unity3d.ads.android.view.UnityAdsFullscreenActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
@@ -182,7 +171,6 @@
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
         <activity
             android:name="com.jirbo.adcolony.AdColonyOverlay"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -195,7 +183,6 @@
             android:name="com.jirbo.adcolony.AdColonyBrowser"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-
         <activity
             android:name="com.vungle.publisher.FullScreenAdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -203,16 +190,17 @@
         <activity
             android:name="com.startapp.android.publish.list3d.List3DActivity"
             android:theme="@android:style/Theme" />
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.startapp.android.publish.OverlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent" />
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.startapp.android.publish.FullScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme" />
+
         <service
             android:name="com.yandex.metrica.MetricaService"
             android:enabled="true"
@@ -220,13 +208,17 @@
             android:process=":Metrica">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <action android:name="com.yandex.metrica.IMetricaService" />
+
                 <data android:scheme="metrica" />
             </intent-filter>
+
             <meta-data
                 android:name="metrica:api:level"
                 android:value="39" />
         </service>
+
         <receiver
             android:name="com.yandex.metrica.MetricaEventHandler"
             android:enabled="true"
@@ -235,7 +227,7 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.yandex.mobile.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
@@ -253,13 +245,19 @@
                 <action android:name="com.inmobi.share.id" />
             </intent-filter>
         </receiver>
+
         <service
             android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
             android:enabled="true" />
 
-        <!--suppress AndroidDomInspection -->
+        <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name=".activities.ServicesScrollingActivity"
+            android:label="@string/title_activity_services_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
 </manifest>

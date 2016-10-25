@@ -16,6 +16,7 @@
             android:text="@string/large_text" />
     -->
 
+    <!--
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,7 +24,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <RelativeLayout
                 android:id="@+id/relativeCall"
@@ -314,6 +316,212 @@
                 android:src="@drawable/logo" />
         </LinearLayout>
 
+
+    </ScrollView>
+    -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="35dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeCall"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:background="@color/colorGrey"
+                android:backgroundTint="@color/colorContactI">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Contato II"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbContactII"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/contact_" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeCell"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dp"
+                android:background="@color/colorContactII">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Contato III"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbContactIII"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/contact_two" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeEmail"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignLeft="@+id/relativeCall"
+                android:layout_alignStart="@+id/relativeCall"
+                android:layout_below="@+id/relativeCall"
+                android:layout_marginTop="22dp"
+                android:background="@color/colorApaqI">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="E-mail"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbEmail"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/contact_email" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeRoute"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignLeft="@+id/relativeCell"
+                android:layout_alignStart="@+id/relativeCell"
+                android:layout_alignTop="@+id/relativeEmail"
+                android:background="@color/primary_dark">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Onde estamos"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbMap"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/map_location" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeFacebook"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignLeft="@+id/relativeEmail"
+                android:layout_alignStart="@+id/relativeEmail"
+                android:layout_below="@+id/relativeEmail"
+                android:layout_marginTop="21dp"
+                android:background="@color/colorFacebook">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Facebook"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbFacebook"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/facebook" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeInstagram"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignLeft="@+id/relativeRoute"
+                android:layout_alignStart="@+id/relativeRoute"
+                android:layout_alignTop="@+id/relativeFacebook"
+                android:background="@color/colorInstagram">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Instagram"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/imgbInstagram"
+                    android:layout_width="125dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/transparentWhite"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/instagram" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
 
     </ScrollView>
 

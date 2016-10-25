@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -22,25 +23,25 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ContactActivity extends AppCompatActivity  {
+public class ContactActivity extends AppCompatActivity {
 
-    @BindView(R.id.relativeCall)
-    RelativeLayout rCall;
+    @BindView(R.id.imgbContactII)
+    ImageButton rCall;
 
-    @BindView(R.id.relativeCell)
-    RelativeLayout rCell;
+    @BindView(R.id.imgbContactIII)
+    ImageButton rCell;
 
-    @BindView(R.id.relativeEmail)
-    RelativeLayout email;
+    @BindView(R.id.imgbEmail)
+    ImageButton email;
 
-    @BindView(R.id.relativeRoute)
-    RelativeLayout rRoute;
+    @BindView(R.id.imgbMap)
+    ImageButton rRoute;
 
-    @BindView(R.id.relativeFacebook)
-    RelativeLayout rFacebook;
+    @BindView(R.id.imgbFacebook)
+    ImageButton rFacebook;
 
-    @BindView(R.id.relativeInstagram)
-    RelativeLayout rInstagram;
+    @BindView(R.id.imgbInstagram)
+    ImageButton rInstagram;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,32 +87,32 @@ public class ContactActivity extends AppCompatActivity  {
 
     }
 
-    @OnClick(R.id.relativeCall)
+    @OnClick(R.id.imgbContactII)
     public void call() {
         callphone();
     }
 
-    @OnClick(R.id.relativeCell)
+    @OnClick(R.id.imgbContactIII)
     public void callCell() {
         callCellPhone();
     }
 
-    @OnClick(R.id.relativeEmail)
+    @OnClick(R.id.imgbEmail)
     public void apaqEmail() {
         sendEmail();
     }
 
-    @OnClick(R.id.relativeRoute)
+    @OnClick(R.id.imgbMap)
     public void apaqRoute() {
         route();
     }
 
-    @OnClick(R.id.relativeFacebook)
+    @OnClick(R.id.imgbFacebook)
     public void apaqFacebook() {
         goFacebook();
     }
 
-    @OnClick(R.id.relativeInstagram)
+    @OnClick(R.id.imgbInstagram)
     public void apaqInstagram() {
         goInstagram();
     }
